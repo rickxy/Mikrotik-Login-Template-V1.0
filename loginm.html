@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>LDNETID| LOGIN</title>
+    <link rel="shortcut icon" type="image/png" href="favicon.png">
+    <link href="https://fonts.googleapis.com/css?family=Cabin:400,400i,500i,700%7CRoboto:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css\bootstrap.min.css">
+    <link rel="stylesheet" href="plugins\swiper\swiper.min.css">
+    <link rel="stylesheet" href="plugins\magnific-popup\magnific-popup.min.css">
+    <link rel="stylesheet" href="plugins\color-switcher\color-switcher.css">
+    <link rel="stylesheet" href="css\style.css">
+    <link rel="stylesheet" href="css\responsive.css">
+    <link rel="stylesheet" href="css\colors\theme-color-1.css">
+    <link rel="stylesheet" href="css\custom.css">
+    <script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24451557-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</head>
+
+<body>
+      $(if chap-id)
+<div  class="tab tab-active" data-id="tab1">
+<form name="sendin" action="$(link-login-only)" method="post">
+<input type="hidden" name="username" />
+<input type="hidden" name="password" />
+<input type="hidden" name="dst" value="$(link-orig)" />
+<input type="hidden" name="popup" value="true" />
+</form>
+<script type="text/javascript" src="/md5.js"></script>
+<script type="text/javascript">
+    <!--
+        function doLogin() {
+        document.sendin.username.value = document.login.username.value;
+        document.sendin.password.value = hexMD5('$(chap-id)' + document.login.password.value + '$(chap-challenge)');
+        document.sendin.submit();
+        return false;
+        }
+    //-->
+    </script>
+$(endif)
+    <div class="preLoader"></div>
+    <header class="header">
+        <div class="main-header">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-2 col-md-3 col-sm-3 col-9">
+                        <div class="logo" data-animate="fadeInUp" data-delay=".7">
+                            <a href="login.html"> <img src="img\logo.png" alt="MI_Oreo"> </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-7 col-md-5 col-sm-3 col-3">
+                        <nav data-animate="fadeInUp" data-delay=".9">
+                            <div class="header-menu">
+                                <ul>
+                                    <li class="active"><a href="login.html">Home</a></li>
+                                    <li><a href="faq.html">Bantuan</a></li>
+                                    <li><a href="tel:+628381885002" target="_blank">Call Us</a></li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="position-relative bg-light pt-4 pb-4">
+        <div id="particles_js"></div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="banner-content">
+                        <h1 data-animate="fadeInUp" data-delay="1.2">Welcome.</h1>
+                        <h2 data-animate="fadeInUp" data-delay="1.3"><span class="typed"></span></h2>
+                        <h4 data-animate="fadeInUp" data-delay="1.4">Login Voucher <a href="login.html"alt="MI_Oreo">Klik Disini!</a></p></h4></br>
+                    </div>
+                    <div class="card-block py-lg px-md" data-animate="fadeInUp" data-delay="1.4">
+                        <form name="login" action="$(link-login-only)" method="post" $(if chap-id) onSubmit="return doLogin()" $(endif)/>
+                        <input type="hidden" name="dst" value="$(link-orig)" />
+                        <input type="hidden" name="popup" value="true" />
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="md-form-line-wrap">
+                                            <input name="username" id="" type="text" value="$(username)" placeholder="ID Member"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <div class="md-form-line-wrap">
+                                            <input name="password" type="password" id="nganu" placeholder="Password"/>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        $(if error)
+                                            <p>Terjadi kesalahan: $(error)</p>
+                                        $(endif)
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group mb-0">
+                                        <button type="submit" class="btn btn-block btn-primary"><span class="btn-elem-wrap"><span class="text">LOGIN</span></span></button><span style="display: none;" class="form-notify help-block mb-0"></span>
+                                    </div> 
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <div style="font-size: 10px" align=center>Powered by MikroTik RouterOS</div>                           
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-6 d-none d-lg-block ">
+                    <div class="banner-image"> <img src="img\slide.png" alt="" data-animate="fadeInUp" data-delay="1.4" data-depth="0.2"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pt-7 pb-5-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="single-feature text-center" data-animate="fadeInUp" data-delay=".1"> <img src="img\icons\vpn.png" alt="" data-no-retina="" class="svg">
+                        <h3>Internet super cepat</h3>
+                        <p>Layanan internet super cepat, unlimited dan murah.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-feature text-center" data-animate="fadeInUp" data-delay=".3"> <img src="img\icons\support.png" alt="" data-no-retina="" class="svg">
+                        <h3>24/7 Technical Support</h3>
+                        <p>Layanan support 24/7 jika terjadi gangguan.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="single-feature text-center" data-animate="fadeInUp" data-delay=".5"> <img src="img\icons\guarantee.png" alt="" data-no-retina="" class="svg">
+                        <h3>Internet Unlimited</h3>
+                        <p>Internetan sepuasnya tanpa mikirin FUP.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="pricing-plans pt-7 pb-7">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5">
+                    <div class="section-title">
+                        <h2 data-animate="fadeInUp" data-delay=".1">Harga Paket</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row align-items-center">
+                <div class="col-lg-5">
+                    <div class="pricing-features">
+                        <h3 class="cabin" data-animate="fadeInUp" data-delay=".5">List Harga Member Dan Voucher, Untuk Pembelian Voucher tersedia di <b>Rumah Ibu Edah</b>.</h3>
+                        <ul class="list-unstyled list-item clearfix">
+                            <li data-animate="fadeInUp" data-delay=".1"><i class="fas fa-check-circle"></i>Rp. <b>2500</b> | 12 Jam</li>
+                            <li data-animate="fadeInUp" data-delay=".15"><i class="fas fa-check-circle"></i>Rp. <b>4000</b> | 1 Hari</li>
+                            <li data-animate="fadeInUp" data-delay=".2"><i class="fas fa-check-circle"></i>Rp. <b>10.000</b> | 1 Minggu</li>
+                            <li data-animate="fadeInUp" data-delay=".25"><i class="fas fa-check-circle"></i>Rp. <b>30.000</b> | 1 Bulan</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="pricing-slides text-center">
+                        <div class="swiper-container pricing-slider">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide single-pricing-slide">
+                                    <div class="single-pricing-plan"> <img src="img\icons\startup.png" alt="" data-no-retina="" class="svg">
+                                        <h4>Member</h4> <span class="time roboto">One Month Plan</span> <strong class="roboto">Rp 100K <sub>/bulan</sub></strong>
+                                         <p>Router<span>Di</span> Sewakan
+                                            <br>Biaya Pemasangan <b>250.000</b></p> <a href="#" class="btn btn-primary">Get This Plan</a></div>
+                                </div>
+                                <div class="swiper-slide single-pricing-slide">
+                                    <div class="single-pricing-plan"> <img src="img\icons\enterprise.png" alt="" data-no-retina="" class="svg">
+                                        <h4>Member+</h4> <span class="time roboto">One Month Plan</span> <strong class="roboto">Rp 170K <sub>/bulan</sub></strong>
+                                        <p>Router<span>Di</span> Sewakan
+                                            <br>Biaya Pemasangan <b>250.000</b></p> <a href="#" class="btn btn-primary">Get This Plan</a></div>
+                                </div>
+                                <div class="swiper-slide single-pricing-slide">
+                                    <div class="single-pricing-plan"> <img src="img\icons\bandwith.png" alt="" data-no-retina="" class="svg">
+                                        <h4>VIP</h4> <span class="time roboto">One Month Plan</span> <strong class="roboto">Rp 230K <sub>/bulan</sub></strong>
+                                        <p>Router<span>Di</span> Sewakan
+                                            <br>Biaya Pemasangan <b>250.000</b></p> <a href="#" class="btn btn-primary">Get This Plan</a></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination pricing-pagination position-static"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<footer class="main-footer bg-primary pt-2">
+        <div class="container">
+            <div class="row" style="text-align: center;">
+                <div class="col-md-12">
+                    <div class="footer-info">
+                        <h3 class="text-white" data-animate="fadeInUp" data-delay="0">Kontak</h3>
+                        <ul class="footer-contacts list-unstyled">
+                            <p data-animate="fadeInUp" data-delay=".1">CP: <a href="https://wa.me/628381885002?text=Hallo saya mau berlangganan" target="_blank">0838-1885-002</a></p>
+                            <p data-animate="fadeInUp" data-delay=".15">Email: <a href="#" target="_blank">ldnet.id47@gmail.com</a></p>
+                            <p data-animate="fadeInUp" data-delay=".2">Alamat: <a href="#" target="_blank">Kota Bandung, Jawa Barat</a></p>
+                        </ul>
+                        <ul class="social-links list-inline mb-0">
+                            <li data-animate="fadeInUp" data-delay=".35"><a href="https://wa.me/628381885002?text=Hallo saya mau berlangganan" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom-footer">
+                <div class="row">
+                    <div class="col-md-5 order-last order-md-first">
+                        <p class="copyright" data-animate="fadeInDown" data-delay=".85">&copy; Copyright 2021 <a href="">B</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="back-to-top">
+        <a href="#"> <i class="fas fa-arrow-up"></i></a>
+    </div>
+    <script src="js\jquery-3.2.1.min.js"></script>
+    <script>
+        FontAwesomeConfig = {
+            searchPseudoElements: true
+        };
+    </script>
+    <script src="js\fontawesome-all.min.js"></script>
+    <script src="js\bootstrap.bundle.min.js"></script>
+    <script src="plugins\typed.js\typed.min.js"></script>
+    <script src="plugins\waypoints\jquery.waypoints.min.js"></script>
+    <script src="plugins\waypoints\sticky.min.js"></script>
+    <script src="plugins\swiper\swiper.min.js"></script>
+    <script src="plugins\particles.js\particles.min.js"></script>
+    <script src="plugins\particles.js\particles.settings.js"></script>
+    <script src="plugins\magnific-popup\jquery.magnific-popup.min.js"></script>
+    <script src="plugins\parsley\parsley.min.js"></script>
+    <script src="plugins\parallax\parallax.min.js"></script>
+    <script src="plugins\retinajs\retina.min.js"></script>
+    <script src="js\menu.min.js"></script>
+    <script src="js\scripts.js"></script>
+    <script src="js\custom.js"></script>
+    $(if chap-id)
+    <script type="text/javascript" src="md5.js"></script>
+    <script type="text/javascript">
+        $('#loginForm').submit(function () {
+            var password = $('#inputPassword');
+            password.val(hexMD5('$(chap-id)' + password.val() + '$(chap-challenge)'));
+        });
+    </script>
+    $(endif)
+    <script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+    $("#wrapper").toggleClass("toggled");
+    });
+    </script>
+    <script type="text/javascript">
+    <!--
+    document.login.username.focus();
+    //-->
+    </script>
+</body>
+
+</html>
